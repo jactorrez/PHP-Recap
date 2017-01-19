@@ -20,6 +20,11 @@
  include('includes/header.php'); ?>
 
  <div>
+ 	<div class="breadcrumbs">
+ 		<a href="catalog.php">Full Catalog</a> 
+ 		&gt; <a href="catalog.php?cat=<?php echo $item["category"]?>"><?php echo $item["category"] ?></a>
+ 		&gt; <?php echo $item["title"] ?>
+ 	</div>
  	<div class="about">
  		<h1><?php echo $item["title"] ?></h1>
  		  <table>

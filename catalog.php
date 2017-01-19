@@ -6,13 +6,13 @@
  $section = "Catalog";
 
 if(isset($_GET["cat"])){
-	 if($_GET["cat"] == "books"){
+	 if(strtolower($_GET["cat"]) == "books"){
 	 	$pageTitle = "Books";
 	 	$section = "Books";
-	 } else if($_GET["cat"] == "movies"){
+	 } else if(strtolower($_GET["cat"]) == "movies"){
 	 	$pageTitle = "Movies";
 	 	$section = "Movies";
-	 } else if($_GET["cat"] == "music"){
+	 } else if(strtolower($_GET["cat"]) == "music"){
 	 	$pageTitle = "Music";
 	 	$section = "Music";
 	 }
@@ -22,6 +22,9 @@ if(isset($_GET["cat"])){
 
  <h1><?php echo $pageTitle ?></h1>
  <div class="catalog">
+ 	<?php if($section != "Catalog"){
+ 		echo "<a href='catalog.php'>Full Catalog</a> &gt; $section";
+ 	} ?>
  	<div class="wrapper">
  		<ul>
  			<?php
