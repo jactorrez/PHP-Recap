@@ -1,3 +1,7 @@
 .highlight{
 	color: red;
 }
+
+.form-wrapper form *{
+	display: block;
+}
