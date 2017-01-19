@@ -30,7 +30,7 @@ if(isset($_GET["cat"])){
  			<?php
  			$categories = array_category($catalog, $section);
  			foreach ($categories as $id){
- 				echo get_item_html($catalog[$id]);
+ 				echo get_item_html($id, $catalog[$id]);
  			}
  			?>
  		</ul>
